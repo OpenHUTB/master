@@ -1,0 +1,83 @@
+%!TEX root = ../../csuthesis_main.tex
+\chapter{一级标题}
+
+这是湖南工商大学学位论文\LaTeX{}模板，下面的文字主要作用为对重构后的模板样式设置进行测试。
+测试样例基本覆盖模板设定，包括多级标题的基本样式，段落与缩进距离。
+
+\section{二级标题}
+
+\subsection{三级标题}
+
+\subsubsection{四级标题}
+
+一级标题根据学校提供的Word模板要求，三号黑体居中，上下各空一行，章节号空一个汉字，
+并且每一章节单独起一页，章节号格式应使用阿拉伯数字而非中文汉字。
+
+二级标题为小四号黑体，缩进两个汉字。章节号后空一个汉字。
+
+三级标题小四号楷体GB2312，字体包含在项目中，同样缩进两个汉字，章节号后空一个汉字。
+
+四级标题参照本科学术论文设计样式，分项采取(1)、(2)、(3)的序号。
+
+所有标题样式由\cls{undergraduate.cls}模板文件 \cs{ctexset} 进行设置。
+
+\section{字体}
+
+正文字体默认使用小四号宋体，英文为小四号 Times New Romen，各段行首缩进两个汉字
+
+承千年文脉，扬湖湘精神。湖南工商大学坐落在历史文化名城长沙，创建于1949年，享有“经济湘军基地，企业名家摇篮”的盛誉。她是一所院士领衔的涵盖管理学、经济学、工学、理学、法学、文学、艺术学、交叉学科等多学科相互支撑、协调发展、特色鲜明的财经类大学，是湖南省本科一批招生高校、教育部本科教学工作水平评估优秀高校、博士学位授予立项建设单位、“十三五”国家产教融合发展工程应用型本科高校、全国首批百强“深化创新创业教育改革示范高校”、全国高校实践育人创新创业基地、教育部人文社会科学优秀成果奖大满贯高校。
+
+学校拥有一批以中国工程院院士陈晓红为代表，包括国务院学位委员会管理科学与工程学科评议组召集人、国家自然科学基金委员会委员、教育部管理科学与工程类专业教学指导委员会副主任委员、教育部科技委管理学部副主任、国家基础科学中心主任、国家一级重点学科“管理科学与工程”和国家自然科学基金委创新研究群体负责人、教育部“长江学者创新团队”首席教授、国家“万人计划”领军人才、全国文化名家暨“四个一批”人才、国家首批“百千万人才工程”第一层次人选等在内的国家级高层次人才；拥有高级职称教师近500人，具有博士学位教师近800人；引智院士9名、“杰青”“长江”等专家学者和优秀企业家70人；院士团队入选“全国高校黄大年式教师团队”。
+
+英文字体展示如下：
+
+TeX (/tɛx, tɛk/, see below), stylized within the system as TEX, is a typesetting system (or a "formatting system") which was designed and mostly written by Donald Knuth\cite{knuth1984texbook} and released in 1978. TeX is a popular means of typesetting complex mathematical formulae; it has been noted as one of the most sophisticated digital typographical systems.
+
+
+\subsection{调节字号}
+
+可以使用 \cs{zihao}命令来调节字号。
+
+\begin{tabular}{ll}
+  \verb|\zihao{3} | & \zihao{3}  三号字 English \\
+  \verb|\zihao{-3}| & \zihao{-3} 小三号 English \\
+  \verb|\zihao{4} | & \zihao{4}  四号字 English \\
+  \verb|\zihao{-4}| & \zihao{-4} 小四号 English \\
+  \verb|\zihao{5} | & \zihao{5}  五号字 English \\
+  \verb|\zihao{-5}| & \zihao{-5} 小五号 English \\
+\end{tabular}
+
+\subsection{调节字体}
+
+需要说明的是由于学校写作指导要求的字体部分不可在Linux上使用，即便你的写作过程是在Linux或者macOS上完成的，
+我们仍\textbf{强烈建议}您在Windows操作系统上编译最终版论文。
+
+中文字体可以使用如下命令来调节。
+
+\begin{tabular}{l l}
+  \verb|\songti| & {\songti 宋体} \\
+  \verb|\heiti| & {\heiti 黑体} \\
+%   \verb|\kaiti| & {\kaiti 楷体}
+\end{tabular}
+
+
+\section{模板主要结构}
+
+本项目模板的主要结构, 如下表所示:
+% TODO 进一步完善
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{r|l|l}
+    \hline\hline
+    \multicolumn{2}{l|}{csuthesis\_main.tex } & 主文档，可以理解为文章入口。                                      \\ \hline
+                                                & info.tex   & 作者、文章基本信息 \\ \cline{2-3}
+                                                & abstactzh/en.tex    & 中/英文摘要内容 \\ \cline{2-3}
+    \raisebox{1em}{content 目录 }          &  subchapters 目录   & 章节内容           \\ \hline
+    \multicolumn{2}{l|}{images 目录}         & 用于存放图片文件                                                \\ \hline
+    \multicolumn{2}{l|}{hutbthesis.cls }       & 模板入口                         \\ \hline\hline
+  \end{tabular}
+\end{table}
+
+我们不建议模板使用者更改原有模板的结构，
+但如果您确实需要，请务必先充分阅读本模板的使用说明并了解相应的\LaTeX{}模板设计知识。
