@@ -2,8 +2,10 @@
 
 湖南工商大学研究生毕业设计模板。
 
-# 使用
-使用 texstudio 和 latex 进行编译。
+# 环境配置
+使用 texstudio 和 latex 进行写作。
+
+在 latex 2023 中编译成功，latex 2016 编译失败（需要更高的版本，其他版本的 latex 没试过）。
 
 # 贡献
 有任何对模板格式进行调整的可以提交 Pull Request。
